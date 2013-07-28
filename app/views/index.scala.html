@@ -1,0 +1,67 @@
+@(message: String)
+
+@main("Preview") {
+    
+    <form method="POST" action="/pdf">
+        <textarea id="documentContent" name="documentContent" cols="150" rows="10"></textarea>
+
+        <br><br>
+
+        Front Side: <input name="currentSideContent" class="currentSideContent" type="radio" value="front" />
+        <textarea id="frontContent" name="frontContent" class="sideContent" cols="150" rows="10">
+<div ink2_template="5x7" name="Ink2_canvas" id="Ink2_canvas" height="519px" width="375px" style="overflow: hidden; position: relative; width: 375px; height: 519px;">
+  <div id="archive_front" style="overflow: hidden; position: absolute; left: 0px; top: 0px; width: 375px; height: 519px;">
+    <div class="divImg" name="divImgarchive_front" id="divImgarchive_front" locked="1" rotate="0" style="position: absolute; top: 0px; left: -201px; width: 780px; height: 519px; ">
+      <img id="imgarchive_front" name="imgarchive_front" width="780" height="519" src="http://useast-thumb.imgag.com/image/k1/Ycr27xINz6zgmXSzm7UFJBk9uIuQjv-TwKCksDcn1lnnI52dcPDsi5Kdf3oF7hKhGbGO8Bz8dde0RLeVvpzelfS0kdmiLiKTsM.VwiW3QHz7vlc355iL6p9FJ5gnOJ98TR9GEdlVhUFx-JVitFOyjEslpdQzPktCJlEVUqUTt0kNMOCnKiNFs1ABurzwhC1M0HxC1IoZ1sFM3EMmn-4NHXTYzyTEg8QZ9VAS1zzMNVBjFbiV2h7.8.AQgWTao5ObpZAxWYXebR2VzA5teFLd59-IQVmV.2KAEt0hMmV81lZHVhtXW4P0IY-iY3CQ93CEELTdmZ3xbB6SE8TJRoUQ3LvItKcplpBkkKDUr1P9QevtXAO0O4k37nofoPskdRspG7azBnFAxOc_.jpg"/>
+    </div>
+  </div>
+</div>
+        </textarea>
+
+
+        <br><br>
+
+        Inside: <input name="currentSideContent" class="currentSideContent" type="radio" value="inside" />
+        <textarea id="insideContent" name="insideContent" class="sideContent" cols="150" rows="10">
+<div ink2_template="5x7" name="Ink2_canvas" id="Ink2_canvas" height="519px" width="735px" style="overflow: hidden; position: relative; width: 735px; height: 519px;">
+  <div id="texti1" style="overflow: visible; position: absolute; left: 402px; top: 147px; width: 292px; height: 132px;">
+    <div class="divTxt" name="divTxttexti1" id="divTxttexti1" locked="0" style="top: 147px; left: 402px; width: 292px; height: 132px; font-family: fusi; font-size: 24.369pt; font-weight: normal; text-align: center; color: #003366; line-height: 30.74pt; letter-spacing: 0em; background: transparent; margin-top: 0.056in;">Who knows what evil lurks <br>in the hearts of men?</div>
+  </div>
+  <div id="texti2" style="overflow: visible; position: absolute; left: 402px; top: 284px; width: 292px; height: 112px;">
+    <div class="divTxt" name="divTxttexti2" id="divTxttexti2" locked="0" style="top: 284px; left: 402px; width: 292px; height: 112px; font-family: chiselcondensed; font-size: 35.446pt; font-weight: normal; text-align: center; color: #990000; line-height: 40.54pt; letter-spacing: 0em; background: transparent; margin-top: 0.0723636in;">The Shadow knows!</div>
+  </div>
+</div>
+        </textarea>
+
+
+        <br><br>
+
+        Back Side: <input name="currentSideContent" class="currentSideContent" type="radio" value="back" />
+        <textarea id="backContent" name="backContent" class="sideContent" cols="150" rows="10">
+<div ink2_template="5x7" name="Ink2_canvas" id="Ink2_canvas" height="519px" width="375px" style="overflow: hidden; position: relative; width: 375px; height: 519px;">
+  <div id="archive_back" style="overflow: hidden; position: absolute; left: 0px; top: 0px; width: 375px; height: 519px;">
+    <div class="divImg" name="divImgarchive_back" id="divImgarchive_back" locked="1" rotate="0" style="position: absolute; top: 0px; left: 0px; width: 375px; height: 519px; ">
+      <img id="imgarchive_back" name="imgarchive_back" width="375" height="519" src="http://images.ink2.com/partner/cardstore/rgb/52x72/assets/boc/cs_collection_5x7_fc_boc_cardres.jpg"/>
+    </div>
+  </div>
+  <div id="cs_overlay" style="overflow: hidden; position: absolute; left: 0px; top: 0px; width: 375px; height: 519px;">
+    <div class="divImg" name="divImgcs_overlay" id="divImgcs_overlay" locked="1" rotate="0" style="position: absolute; top: 0px; left: 0px; width: 375px; height: 519px; ">
+      <img id="imgcs_overlay" name="imgcs_overlay" width="375" height="519" src="http://images.ink2.com/partner/cardstore/rgb/52x72/assets/boc/cs_collection_5x7_fc_boc_tag_cardres.png"/>
+    </div>
+  </div>
+  <div id="textbcs" style="overflow: visible; position: absolute; left: 18px; top: 469px; width: 241px; height: 25px;">
+    <div class="divTxt" name="divTxttextbcs" id="divTxttextbcs" locked="0" style="top: 469px; left: 18px; width: 241px; height: 25px; font-family: geo; font-size: 5.505pt; font-weight: normal; text-align: left; color: #585852; line-height: 6.61pt; letter-spacing: 0em; background: transparent; margin-top: 0in;">www.cardstore.com</div>
+  </div>
+  <div id="textbag" style="overflow: visible; position: absolute; left: 18px; top: 479px; width: 241px; height: 25px;">
+    <div class="divTxt" name="divTxttextbag" id="divTxttextbag" locked="0" style="top: 479px; left: 18px; width: 241px; height: 25px; font-family: fusi; font-size: 4.996pt; font-weight: normal; text-align: left; color: #585852; line-height: 6pt; letter-spacing: 0em; background: transparent; margin-top: 0in;">AMERICAN GREETINGS CLEVELAND, OHIO 44144<br>&copy;AGC, LLC MADE IN USA</div>
+  </div>
+</div>
+        </textarea>
+
+
+
+        <br><br>
+        <input type="submit" value="submit"/>
+    </form>
+    
+}
