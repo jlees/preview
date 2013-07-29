@@ -1,5 +1,5 @@
 import sbt._
-import Keys._
+import sbt.Keys._
 import play.Project._
 
 object ApplicationBuild extends Build {
@@ -11,12 +11,14 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     jdbc,
     anorm,
-    "pdf" % "pdf_2.10" % "0.5"
+    "pdf" % "pdf_2.10" % "0.5",
+    "org.apache.pdfbox" % "pdfbox" % "1.8.2"
   )
 
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    resolvers += Resolver.url("My GitHub Play Repository", url("http://www.joergviola.de/releases/"))(Resolver.ivyStylePatterns)
+    resolvers += Resolver.url("Pdf from Html plugin", url("http://www.joergviola.de/releases/"))(Resolver.ivyStylePatterns),
+    resolvers += Resolver.url("PdfBox", url("http://mvnrepository.com/"))(Resolver.mavenStylePatterns)
   )
 
 }

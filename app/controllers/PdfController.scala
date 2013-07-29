@@ -29,8 +29,7 @@ object PdfController extends Controller {
             ("error" -> Messages("validation.errors")))
         },
         success = { htmlDocument =>
-          val documentContent = htmlDocument.documentContent
-          val pdfData = PDF.toBytes(views.html.document.render(documentContent))
+          val pdfData = PDF.toBytes(views.html.document.render(htmlDocument.documentContent))
           Ok(pdfData).as("application/pdf")
         }
       )

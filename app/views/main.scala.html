@@ -19,6 +19,12 @@
                   changeSide();
               });
               changeSide();
+              $("#outputType").change(function() {
+                 $("#previewForm").attr("action", $(this).val());
+              });
+              $("#btnSubmit").click(function() {
+                 $("#previewForm").attr("action", $("#outputType").val());
+              });
           });
 
           function changeSide(){

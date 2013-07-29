@@ -2,9 +2,15 @@
 
 @main("Preview") {
     
-    <form method="POST" action="/pdf">
+    <form id="previewForm" method="POST" action="/jpg">
         <textarea id="documentContent" name="documentContent" cols="150" rows="10"></textarea>
 
+        <br><br>
+
+        <select id="outputType">
+            <option value="/jpg">JPG</option>
+            <option value="/pdf">PDF</option>
+        </select>
         <br><br>
 
         Front Side: <input name="currentSideContent" class="currentSideContent" type="radio" value="front" />
@@ -61,7 +67,7 @@
 
 
         <br><br>
-        <input type="submit" value="submit"/>
+        <input id="btnSubmit" type="submit" value="submit"/>
     </form>
     
 }
